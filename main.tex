@@ -1,0 +1,108 @@
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsthm,xspace,a4wide,tabularx}
+\usepackage{hyperref,color}
+\usepackage{setspace}
+\doublespacing
+\usepackage{breakcites}
+\usepackage{lineno}
+\linenumbers
+
+
+\usepackage{tabularx,multirow}
+\usepackage[page]{appendix}
+\usepackage{macros}
+
+\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\fancyfoot{}
+\rhead{\thepage} 
+
+
+
+\usepackage{pgfgantt}
+\usetikzlibrary{decorations.pathmorphing, shadows, shadings}
+
+\hypersetup{
+    colorlinks=true,   % color instead of boxes
+    citecolor=blue,    % cite links in blue
+    linkcolor=blue
+}
+
+
+\theoremstyle{plain}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem} %%% Original
+
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation} 
+\newtheorem{sketch}[theorem]{Sketch} 
+\newtheorem{acknowledgements}[theorem]{Acknowledgements}
+%
+\newtheorem{fact}[theorem]{Fact}
+
+
+
+\usepackage[font=small,labelfont=bf]{caption}
+
+
+
+
+\begin{document}
+
+
+\title{A logical framework to study concept-learning biases in the presence of multiple explanations}
+
+
+
+\author{Sergio Abriola$^{1,*}$  \and Pablo Tano$^{1,2,3,}$\footnote{Contributed equally to this work} \and Sergio Romano$^{1}$ \and Santiago Figueira$^{1}$}
+
+\date{
+\begin{small}
+$^1$ Universidad de Buenos Aires, and ICC-CONICET, Argentina \\
+$^2$ Department of Basic Neurosciences, University of Geneva, Switzerland \\
+$^3$ corresponding author: pablo.tanoretamales@unige.ch \\
+\end{small}}
+
+
+\maketitle
+
+
+\begin{abstract}
+When people seek to understand concepts from an incomplete set of examples and counterexamples, there is usually an exponentially large number of classification rules that can correctly classify the observed data, depending on which features of the examples are used to construct these rules. A mechanistic approximation of human concept-learning should help to explain how humans prefer some rules over others when there are many that can be used to correctly classify the observed data. Here, we exploit the tools of propositional logic to develop an experimental framework that controls the minimal rules that are \textit{simultaneously} consistent with the presented examples. For example, our framework allows us to present participants with concepts consistent with a disjunction \textit{and also} with a conjunction, depending on which features are used to build the rule. Similarly, it allows us to present concepts that are simultaneously consistent with two or more rules of different complexity and using different features. Importantly, our framework fully controls which minimal rules compete to explain the examples and is able to recover the features used by the participant to build the classification rule, without relying on supplementary attention-tracking mechanisms (e.g.\ eye-tracking). We exploit our framework in an experiment with a sequence of such competitive trials, illustrating the emergence of various transfer effects that bias participants' prior attention to specific sets of features during learning.
+
+\end{abstract}
+
+
+\input{Introduction.tex}
+
+\input{Experiment.tex}
+
+\input{Methodology.tex} 
+
+\input{Results.tex}
+
+\input{Discussion.tex}
+
+
+
+\paragraph{Open Practices Statement.} This study's methodology, data collection procedures, sample size, exclusion criteria, and hypotheses were preregistered on the Open Science Framework (OSF) in advance of the data collection and analysis, in order to ensure transparency, reproducibility, and rigour. The preregistration of this study can be found at \url{https://osf.io/mgex3}. The actual experiment as presented to the participants, together with all the experimental data analyzed, is available online at \url{https://osf.io/gtuwp/}.
+
+
+\bibliographystyle{apalike} 
+\bibliography{biblioCategorization}
+
+\input{Appendix.tex}
+
+\end{document}
+

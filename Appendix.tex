@@ -1,0 +1,99 @@
+\newpage
+\begin{appendices}
+
+
+
+\section{Exclusion criteria and data processing}\label{Sec:ExclusionCriteria}
+
+We decided to collect data for up to 3 weeks or until we reached a total of 100 participants. Via restrictions on the platform where the experiment was conducted, participants that took more than 4 hours or who did not complete all the trials were automatically excluded from the analysis. We were also prepared to exclude afterward the results from those participants whose verbal explanations denoted the use of external aids or methods outside the scope of the paper, such as using external help or taking screenshots of the concept, but there were no clear-cut cases of that behaviour ($N=0$).  
+
+ Additionally, while our preregistered exclusion criteria did not encompass the potential cases of written explanations that were legitimate but indicative of use of rules extraneous to propositional logic or to our semantic framework, in the end we did not detect any of these cases. This encouraging result is weakly indicative of the usefulness of our careful considerations for building adequate semantic representations, as mentioned in Section~\ref{Experiment_design}. For the comprehensive written explanations of the participants, we refer the reader to the uploaded raw data at \url{https://osf.io/gtuwp/}.  
+
+
+Balanced division into the two groups was handled via the psiTurk library, which decides the group a new worker will be assigned to, based on the current number of completed experiments in each group. 
+
+ We ignored individual trails from participants that in the generalization stage chose a generalization inconsistent with any valid explanation (but this did not provoke the exclusion of other independent trials by the same participant). See Section~\ref{Results} for details. 
+
+
+\section{Pilot} \label{subsection:resultsPilot}
+This experiment  is  informed by a previous pilot with 22 participants, which we executed in order to have some validation for our expected effects before making the preregistration. This pilot used more complex pairs of concepts, with a longer minimum description length for the two corresponding rules, and where using both $\AND$ and $\OR$ in the same rule was often necessary. 
+Originally, we expected a naturally arising separation into different groups, depending on the features of explanation found for the first trial. However, we encountered a very strong preference for explanations using solely $\AND$, and this prompted various changes in the final design of the experiment that was preregistered in the OSF version.
+
+More precisely, in our first trial in that pilot, 81\% ($N = 18$) of the workers explained the (incomplete) concept as a conjunction of three variables, while only 9\% ($N = 2$) explained it as a disjunction of two. This happened even though we had made the $\AND$ explanation longer with the intention to compensate for the relative ease of $\AND$ with respect to $\OR$ (so as to avoid getting a statistically inadequate number of participants self-selecting to the $\OR$ case).
+This result goes in line with known work about the relative hardness of learning concepts with the $\OR$ operator \cite{bourne1970knowing}. In our framework of more than one plausible rule, a possible explanation to this population disparity could be that, when looking for common characteristics, it is natural to search first for individual features that always appear. Another explanation could be that, in a universe with low number of features, repetition of many of them becomes very salient, and thus the relation between hardness and number of conjunctions is not necessarily monotonic.
+In any case, this result was not part of the preregistration, so it is presented here only as an indication of an interesting effect to study.
+
+
+
+
+\section{Technical results}\label{Sec:MainTheoremConcept}
+Let us fix a non-empty set of propositional variables \propvars. 
+A valuation is formally defined as a function ${v:\propvars\rightarrow\{0,1\}}$ that determines the truth value of the propositional variables. A valuation can be extended in the standard way to preserve the usual semantics of Boolean operators and thus to determine the truth value of propositional formulas (which we call `rules' in the context of describing concepts). 
+We say that a valuation $v$ satisfies a formula~$\varphi$ if $v(\varphi)=1$. We say that a formula $\varphi$ is a contingency if there exist a valuation $v_t$ that satisfies it and a valuation $v_f$ that does not.
+
+
+Given a propositional formula $\varphi$, we define $\variables{\varphi}$ as the set of variables that appear in it. For example, if $\varphi_{e} = p_1 \lor (p_2 \land \lnot p_2)$, then $\variables{\varphi_e} = \{p_1, p_2\}$.
+
+We say that a formula $\varphi$ is variable-minimal if there is no other formula $\psi$ such that the truth values of $\varphi$ and $\psi$ coincide over all valuations and $\variables{\psi} \subsetneq \variables{\varphi}$. For example, the previous $\varphi_e$ is not variable-minimal, since it is equivalent to $\psi = p_1$, which uses one less propositional variable. 
+
+
+We begin by proving a very basic lemma for illustrative purposes. 
+\begin{lemma}\label{lemma:InterseccionUnionConceptos}
+
+Let $\varphi_1$ and $\varphi_2$ be two contingencies such that $\variables{\varphi_1} \cap  \variables{\varphi_2} = \emptyset$.
+
+
+Then there exists a valuation $v_{in}$ such that $v_{in}$ satisfies both $\varphi_1$ and $\varphi_2$, and a valuation $v_{out}$ that satisfies neither $\varphi_1$ nor $\varphi_2$.
+\end{lemma}
+In other words, the lemma says that when we have two non-trivial concepts concerning non-overlapping sets of features, then there is at least one (positive) example that satisfies both concepts simultaneously and at least one (negative) example that satisfies none of them. 
+
+\begin{proof}
+Whether a valuation satisfies or not a formula $\varphi$ depends only on how it evaluates propositional variables on $\variables{\varphi}$. Since $\variables{\varphi_1} \cap  \variables{\varphi_2} = \emptyset$ and both formula are satisfiable via some $v_1$ and $v_2$ respectively, we can construct a valuation $v_{in}$ by joining the values of $v_1, v_2$ on the (disjoint) sets of variables of each formula: $v_{in}(p) = v_1(p)$ if $p \in \variables{\varphi_1}$,  $v_{in}(p) = v_2(p)$ if $p \in \variables{\varphi_2}$, and $v_{in}(p) = 0$ otherwise. 
+
+Similarly, since $\varphi_1, \varphi_2$ are not contingencies, there exist valuations $\bar{v}_1$ and $\bar{v}_2$ that do not satisfy $\varphi_1$ and $\varphi_2$ respectively. We use these valuations as before to construct a valuation $v_{out}$ that does not satisfy $\varphi_1$ nor $\varphi_2$, as we wanted.
+\end{proof}
+
+
+\begin{lemma} \label{lemma:variableMinimalProp}
+If $\varphi$ is a variable-minimal contingency, and $p \in \variables{\varphi}$, then there exists a valuation $v$ such that $v$ satisfies $\varphi$ but $\tilde{v}$ does not, where $\tilde{v}$ is the single valuation that coincides with $v$ except on $p$.
+\end{lemma}
+\begin{proof}
+
+
+By way of contradiction, assume the conclusion does not hold: that for any valuation, its satisfaction of $\varphi$ is independent of its value on $p$. In this case, necessarily $\{p\} \neq \variables{\varphi}$, 
+ or otherwise $\varphi$ would not be a contingency (as it would always be true or always false).
+
+Now consider $V_\varphi$ the (non-empty) set of valuations that satisfy $\varphi$, and consider $V^{-p}_\varphi$ its restriction to $\variables{\varphi} \backslash\{p\}$. From $V^{-p}_\varphi$ we can construct, in a standard way via truth tables, a formula $\tilde{\varphi}$ with $\variables{\tilde{\varphi}} = \variables{\varphi} \backslash\{p\}$ such that a valuation $v$ satisfies $\tilde{\varphi}$ if and only if $v|_{ \variables{\tilde{\varphi}}} \in V^{-p}_\varphi$. Since by assumption the value of $p$ does not matter for $\varphi$, we have by construction that $\varphi$ is equivalent to $\tilde{\varphi}$, but $\variables{\tilde{\varphi}} \subsetneq \variables{\varphi}$, which contradicts the variable-minimality of $\varphi$.
+\end{proof}
+
+
+The following theorem shows the general theoretical correctness of our experimental setup. 
+It says that if we show as positive examples the full intersection of two non-trivial concepts whose minimal descriptions contain no features in common, and show as negative examples the complement of the union of both concepts, any rule used to explain the seen (incomplete) concept must use a superset of the variables used to minimally describe one of these concepts. Otherwise, the chosen rule would be incompatible with the known data.  
+
+\begin{theorem}\label{theorem:TeoremaPrincipal}
+Let $\varphi_1$ and $\varphi_2$ be two variable-minimal contingencies such that $\variables{\varphi_1}\cap \variables{\varphi_2} = \emptyset$. Let $\psi$ be a formula such that $\variables{\psi} \cap \variables{\varphi_1} \neq \variables{\varphi_1}$ and such that $\variables{\psi} \cap \variables{\varphi_2} \neq \variables{\varphi_2}$. 
+Furthermore, assume that for all valuations $v$ that satisfy $\varphi_1 \land \varphi_2$, $v$ also satisfies $\psi$. 
+Then there exist two valuations $v_{in}, v_{out}$ such that:
+\begin{enumerate}
+    \item \label{item:v1EnInterseccion} $v_{in}$ satisfies $\varphi_1 \land \varphi_2$
+    \item $v_{out}$ does not satisfy $\varphi_1 \lor \varphi_2$ %(i.e. it does not satisfy $\varphi_1$ nor $\varphi_2$).
+    \item $v_{in}$ and $v_{out}$ both satisfy $\psi$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+
+From the hypotheses we know that there is a variable $p_1 \in \variables{\varphi_1} \backslash \variables{\psi}$ and a variable $p_2 \in \variables{\varphi_2} \backslash \variables{\psi}$. 
+Since $\varphi_1, \varphi_2$ are variable-minimal contingencies, from Lemma~\ref{lemma:variableMinimalProp} we have that there exist valuations $v_1$ and $v_2$ such that they satisfy $\varphi_1$ and $\varphi_2$ respectively, but where $\tilde{v}_1$ and $\tilde{v}_2$ do not, with $\tilde{v}_1$ and $\tilde{v}_2$ being the valuations that coincide with $v_1$ and $v_2$ save on $p_1$ and $p_2$ respectively. 
+Using that $\variables{\varphi_1} \cap \variables{\varphi_2} = \emptyset$, we can construct from $v_1$ and $v_2$ (as we did in the proof of Lemma~\ref{lemma:InterseccionUnionConceptos}) a valuation $v_{in}$ such that $v_{in}$ satifies both $\varphi_1$ and $\varphi_2$, and also such that $v_{out}$ does not satisfy neither of them, where we take $v_{out}$ to coincide with $v_{in}$ save on $p_1$ and on $p_2$. 
+From the hypothesis, necessarily $v_{in}$ satisfies $\psi$. However, since $\{p_1, p_2\} \cap \variables{\psi} = \emptyset$, the value over $p_1$ or $p_2$ does not matter for the satisfaction of $\psi$, and thus $v_{out}$ also satisfies $\psi$, as we wanted to see.
+\end{proof}
+
+
+Note that the statement of Theorem~\ref{theorem:TeoremaPrincipal} can be generalized to any number of non-trivial rules $\varphi_1, \dots, \varphi_n$ such that $\variables{\varphi_i} \cap \variables{\varphi_j} = \emptyset$ for all $i \neq j$, and with $\psi$ such that $\variables{\psi} \cap \variables{\varphi_i} \neq \variables{\varphi_i}$ for all $i$. 
+This means that we can test concept learning under any multiplicity of possible explanations, as long as the underlying propositional universe is large enough and the rules are chosen adequately. 
+
+
+
+\end{appendices}
+

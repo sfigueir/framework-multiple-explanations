@@ -1,0 +1,1031 @@
+\ProvidesPackage{macros}
+%\RequirePackage{ifthen}
+\RequirePackage{amssymb}
+\RequirePackage{amsmath}
+
+\newcommand{\defstyle}[1]{{\boldmath{\bf{#1}}}}
+%\newcommand{\defstyle}[1]{{\uppercase{#1}}}
+\newcommand{\emphstyle}[1]{\textit{#1}} 
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Ealt}{\mathbb{F}}
+\newcommand{\V}{\mathbb{V}}
+
+
+\newcommand{\ie}{\textit{i.e.}}
+%\newcommand{\eg}{\textit{e.g.}}
+%\newcommand{\resp}{resp.\ }
+%\newcommand{\cf}{\textit{cf.}}
+%\newcommand{\cum}{\textit{cum}\xspace}
+
+%% math symbols
+\newcommand{\shorteq}{%
+  \settowidth{\@tempdima}{-}% Width of hyphen
+  \resizebox{\@tempdima}{\height}{=}%
+}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Land}{\bigwedge}
+\newcommand{\Lor}{\bigvee}
+\newcommand{\es}{\emptyset}
+\newcommand{\incl}{\subseteq}
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\ci}{\circ}
+\newcommand{\sat}{\vDash}
+\newcommand{\notsat}{\nvDash}
+\newcommand{\imp}{\Rightarrow}
+\newcommand{\fleq}{\preccurlyeq}
+\newcommand{\false}{\mbox{\it false}}
+\newcommand{\true}{\mbox{\it true}}
+\def\ff{\mbox{\it{ff}}}
+%\def\tt{\mbox{\it{tt}}}
+\newcommand{\ttrue}{\mathit{tt}}
+\newcommand{\ffalse}{\mathit{ff}}
+\newcommand{\Nat}{{\mathbb N}}
+\newcommand{\Int}{{\mathbb Z}}
+\newcommand{\Ord}{\mbox{\textit{Ord}}}
+\newcommand{\ex}{\exists}
+\newcommand{\all}{\forall}
+\newcommand{\Dom}{\operatorname{\mathrm{Dom}}}
+\newcommand{\Ran}{\operatorname{\mathrm{Ran}}}
+\newcommand{\Inf}{\operatorname{\mathrm{Inf}}}
+%\newcommand{\inf}{\operatorname{\mathrm{inf}}}
+\newcommand{\last}{\operatorname{\mathrm{last}}}
+\newcommand{\fin}{\operatorname{\mathrm{fin}}}
+\newcommand{\Un}{\operatorname{\mathrm{Un}}}
+\newcommand{\Prop}{\mathit{Prop}}
+\newcommand{\Act}{\mathit{Act}}
+\newcommand{\LTrL}{\ensuremath{\mathit{LTrL}}}
+\newcommand{\LTL}{\ensuremath{\mathit{LTL}}}
+
+%% math operators
+
+\newcommand{\sq}[1]{[#1]}
+\newcommand{\tup}[1]{\langle #1 \rangle}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\coloneqq}{\mathrel{\mathop:}=}
+\newcommand{\Coloneqq}{\mathrel{{\mathop:}{\mathop:}}=}
+
+%% Caligraphic
+
+\newcommand{\Aa}{{\mathcal A}}
+\newcommand{\Bb}{{\mathcal B}}
+\newcommand{\Cc}{{\mathcal C}}
+\newcommand{\Dd}{{\mathcal D}}
+\newcommand{\Ee}{{\mathcal E}}
+\newcommand{\Ff}{{\mathcal F}}
+\newcommand{\Gg}{{\mathcal G}}
+\newcommand{\Hh}{{\mathcal H}}
+\newcommand{\Jj}{{\mathcal J}}
+\newcommand{\Kk}{{\mathcal K}}
+\newcommand{\Ll}{{\mathcal L}}
+\newcommand{\Mm}{{\mathcal M}}
+\newcommand{\Nn}{{\mathcal N}}
+\newcommand{\Oo}{{\mathcal O}}
+\newcommand{\Pp}{{\mathcal P}}
+\newcommand{\Qq}{{\mathcal Q}}
+\newcommand{\Rr}{{\mathcal R}}
+\newcommand{\Ss}{{\mathcal S}}
+\newcommand{\Tt}{{\mathcal T}}
+\newcommand{\Uu}{{\mathcal U}}
+\newcommand{\Vv}{{\mathcal V}}
+\newcommand{\Ww}{{\mathcal W}}
+\newcommand{\Xx}{\mathcal X}
+\newcommand{\Yy}{{\mathcal Y}}
+\newcommand{\Zz}{{\mathcal Z}}
+
+
+
+
+%% various text 
+\newcommand{\Var}{\ensuremath{\mathit{Var}}}
+\newcommand{\Val}{\ensuremath{\mathit{Val}}}
+
+\newcommand{\I}{\ensuremath{\mathit{I}}}
+\newcommand{\II}{\ensuremath{\mathit{II}}}
+
+\newcommand{\SiS}{\mbox{$S1S$}}
+\newcommand{\SiiS}{\mbox{$S2S$}}
+\newcommand{\MSii}{MS${}_2$}
+
+\newcommand{\LFP}{\operatorname{\mathsf{LFP}}}
+\newcommand{\GFP}{\operatorname{\mathsf{GFP}}}
+\newcommand{\LGFP}{\begin{smallmatrix}\LFP\\ \GFP\end{smallmatrix}}
+\newcommand{\rt}{\text{\textit{rt}}}
+%\newcommand{\qd}{\operatorname{\mathsf{qd}}}
+\newcommand{\FL}{\operatorname{\mathsf{FL}}}
+
+
+
+
+%\newcommand{\comment}[1]{\marginpar{\footnotesize #1}}
+
+\newcommand{\ctlstar}{CTL$^*$ }
+
+\newcommand{\ign}[1]{}
+
+%\ProcessOptions
+
+
+
+
+
+
+
+% Comment environments
+%\newenvironment{comment}{\small\bf}{}
+%\newcommand{\TBC}{\textbf{\small TO BE COMPLETED}} %preprint
+%\newcommand{\TBI}{\textbf{\small TO BE IMPROVED}} %preprint
+
+%%2cat
+
+
+
+%Abbreviations
+%\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\cf}{\textit{cf.}}
+\newcommand{\resp}[1]{[resp.\ #1]\xspace}
+
+%\renewcommand{\bfdefault}{sb}
+
+%% cardinal sets
+\newcommand{\1}[1]{\underline{#1}}
+
+%\newcommand{\defstyle}[1]{\textbf{#1}}
+%
+%\newcommand{\ZZ}{\mathds{Z}}
+%\newcommand{\N}{\mathds{N}}
+%% OPTION 1 if non-negatives are the norm
+\newcommand{\Nz}{\N} % naturals with zero
+\newcommand{\Np}{\N^+} %positive numbers without zero
+%% OPTION 2 if positives are the norm
+%\newcommand{\Nz}{\N_0} % naturals with zero
+%\newcommand{\Np}{\N} %positive numbers without zero
+
+
+
+
+\newcommand{\fullver}[1]{\textcolor{red}{#1}}%
+\newcommand{\fullverelse}[2]{\textcolor{red}{#1}\textcolor{blue}{[#2]}}%
+
+
+%\usepackage{etex,environ,refcount}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\len}{{\sf len}} % ADVERTENCIA: en IC15 tambien se define... decidi dejar este, pero ver si no son cosas distintas?
+\newcommand{\flen}{{\sf fl}}
+\newcommand{\blen}{{\sf bl}}
+
+%\newcommand{\pd}{{\rm pd}} obsolete
+\newcommand{\mfl}{{\sf mfl}}
+\newcommand{\mbl}{{\sf mbl}}
+\newcommand{\ml}{{\sf ml}}
+
+\newcommand{\size}{{\rm size}}
+\newcommand{\depth}{{\rm d}}
+
+%\newcommand{\emptystr}{\lambda} %notation for empty string
+
+\newcommand{\zigml}{{\bf Zig}\xspace}
+\newcommand{\zagml}{{\bf Zag}\xspace}
+
+\newcommand{\zig}{{\bf Zig$_=$}\xspace}
+\newcommand{\zag}{{\bf Zag$_=$}\xspace}
+\newcommand{\zigi}{{\bf Zig$_=^f$}\xspace}
+\newcommand{\zagi}{{\bf Zag$_=^f$}\xspace}
+\newcommand{\zigp}{{\bf Zig$_=^p$}\xspace}
+\newcommand{\zigc}{{\bf Zig$_=^c$}\xspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Cambio para que se asemeje m\'as al formato del capitulo 4
+\newcommand{\problembisim}[3]{
+{\small
+\begin{center}
+\fbox{\begin{tabular}{rl}
+%&&\defstyle{\textsc{#1-[Bi]Similarity problem}} \\[0ex] \hline\hline\\[-1.6ex]
+\multicolumn{2}{c}{\defstyle{#1-[Bi]Similarity problem}} \\[0ex] \hline\hline\\[-1.6ex]
+INPUT :&  Data graphs $\Gg$ and $\Gg'$, nodes $u \in G$ and $u' \in G'$.
+\\
+OUTPUT :& `Yes' iff $\Gg,u #2 \Gg',u'$ [iff $\Gg,u #3 \Gg',u'$, resp.]
+\end{tabular}}
+\end{center}}
+}
+
+
+
+\newcommand{\problemdecision}[3]{
+{\small
+\begin{center}
+\fbox{
+	\begin{tabular}[l]{rl}
+	\multicolumn{2}{c}{{#1}} 
+	\\ 
+	[0ex] \hline\hline 
+	\\ 
+	[-1.6ex]
+	INPUT :& #2
+	\\
+	OUTPUT :& `Yes' iff #3
+	\end{tabular}
+	}
+\end{center}}
+}
+
+
+
+%\newcommand{\xpgpd}[1]{\xpathdg^{\pd\leq\ell}({#1})} obsolete
+
+%
+%\newcommand{\xpp}[1]{\xpathd({#1})^+}
+%\newcommand{\xppg}[1]{\xpathd({#1})^{+}}
+%
+%\newcommand{\xpathdg}{\ensuremath{\xpath_{=}}\xspace}
+\newcommand{\xpathdg}{\ensuremath{\xp{\dow_{\bf{a}}}}\xspace} %%%%%% Para que en la parte de grafos ponga el down. Ademas, difiere de \xpd en que tiene el $_\bf{a}$ para recalcar que es edge-labelled
+\newcommand{\xpathvg}{\ensuremath{\xp{\upw^{\bf{a}}\dow_{\bf{a}}}}\xspace} %%%%%%%%%%%% Para la parte de grafos, reemplazando menciones de two-way xpathdg. Menciones anteriores de \xpathdv fueron reemplazadas por esto
+
+\newcommand{\xpathdgPaths}{\xpathd^{\mbox{\rm \tiny paths}}{(\dow_{\bf{a}}})\xspace} %Fragmento restringido, donde las formulas son solo de la forma \tup{\eps = \dow_{e_1} \dots \dow_{e_n}}
+
+\newcommand{\bisimgd}{\bisim^{\dow_{\bf{a}}}} %%Down bisimulation for edge-labelled data graphs
+\newcommand{\simugd}{\simu^{\dow_{\bf{a}}}} %%Down simulation for edge-labelled data graphs
+\newcommand{\equivgd}{\equiv^{\dow_{\bf{a}}}}
+\newcommand{\sequivgd}{\Rrightarrow^{\dow_{\bf{a}}}}
+\newcommand{\equivgdpaths}{\equivgd_{\rm paths}}
+\newcommand{\sequivgdpaths}{\sequivgd_{\rm paths}}
+
+\newcommand{\bisimgv}{\bisim^{\upw^{\bf{a}}\dow_{\bf{a}}}} 
+\newcommand{\simugv}{\simu^{\upw^{\bf{a}}\dow_{\bf{a}}}}
+\newcommand{\equivgv}{\equiv^{\upw^{\bf{a}}\dow_{\bf{a}}}}
+\newcommand{\sequivgv}{\Rrightarrow^{\upw^{\bf{a}}\dow_{\bf{a}}}}
+
+
+
+
+
+
+%% kR
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% IMPORTANTE AL COPIAR MATERIAL DE OTROS LADOS, COMO IC15%%%%
+%\newif\iffull %sintaxis: \iffull \else \fi
+%\fullfalse  %%%% Todos los iffull ,salvo que sea para visibles comentarios del tipo \sergio, estan siendo usados en el capitulo 1, al final. Son enunciados y demostraciones de binary, algunos muy borrador.
+%\fulltrue
+%%%%%%%%%%%%%%%%%%%%%%%%%% PONER \fulltrue para revelar demos. extendidas %%%%%%%%%%%%
+
+
+%\newtheorem{example}[theorem]{Example}
+
+\usepackage{amsmath,amssymb,amsthm, xspace,color} %a4wide
+
+%\usepackage{chngcntr} %%
+%\counterwithout{figure}{chapter} %% Para que la numeracion de las figuras/figures sea continua, y no se resetee en cada capitulo
+%\counterwithout{equation}{chapter}
+%\counterwithout{footnote}{chapter}
+
+%\theoremstyle{plain}
+%\newtheorem{theorem}{Theorem} %%% Original
+%%\newtheorem{theorem}{Theorem}[chapter] 
+%%\counterwithin*{theorem}{chapter} %%%Quiero que se resetee en cada capitulo, y tambien todo lo que luego esta asociado; props, lemma, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{observation}[theorem]{Observation} % Para el capitulo de axioms 
+%\newtheorem{sketch}[theorem]{Sketch} % para el capitulo de axioms
+%\newtheorem{acknowledgements}[theorem]{Acknowledgements}
+%%
+%\newtheorem{fact}[theorem]{Fact}
+%
+%
+%\theoremstyle{definition}
+%\newtheorem{idea}[theorem]{Idea}
+%\newtheorem{definition}[theorem]{Definition}
+%
+%\theoremstyle{remark}
+%\newtheorem{question}[theorem]{Question}
+%\newtheorem{example}[theorem]{Example}
+%
+%
+%\usepackage[textwidth=0.89in,textsize=scriptsize]{todonotes}
+%\newcommand{\sergio}[1]{\todo[fancyline, color=green!15]{{\bf Sergio:} #1}\xspace}
+%\newcommand{\sidesergio}{\sergio}
+%\newcommand{\bigsergio}[1]{\todo[inline,color=green!15]{{\bf Sergio:} #1}}
+%\newcommand{\santi}[1]{\todo[fancyline, color=red!15]{{\bf Santi:} #1}\xspace}
+%\newcommand{\bigsanti}[1]{\todo[inline,color=red!15]{{\bf Santi:} #1}}
+
+
+
+\newcommand{\uNF}{\mbox{$\cup$-NF}} % 'union normal form' . Para path expressions. Usado originalmente en seccion Bisim vertical
+\newcommand{\uNFfree}{\mbox{$\cup$-free}} % 'union free '. Para path expressions... feo nombre en realidad le puse al comando.
+\newcommand{\ufree}{\mbox{$\cup$-free}}
+
+\newcommand{\stat}[2]{\medskip
+{\noindent\bf {#1}.}{\em{#2}}
+}
+
+\newcommand{\lbl}{\mathit{label}}
+%\newcommand{\bisim}{\leftrightarroweq}
+
+\newcommand{\bisim}{\mathrel{\underline{~~}\hspace{-0.85em}{\leftrightarrow}}}
+
+
+\newcommand{\simu}{\mathrel{\underline{~~}\hspace{-0.75em}{\rightarrow}}}
+
+
+%\newcommand{\tr}{{\sf Tr}}
+\newcommand{\tr}{{\rm Tr}}
+\newcommand{\Th}{{\rm Th}}
+\newcommand{\Thd}{{\rm Th_{\downarrow}}}
+\newcommand{\Thv}{{\rm Th_{\upw\dow}}}
+\newcommand{\Norm}{{\rm Norm}}
+\newcommand{\dtl}{{\rm DTL}}
+\newcommand{\dt}{{\rm DT}}
+
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\polyrsk}{k \cdot (r+s+2)}
+
+
+% CMDS
+\newcommand\+[1]{\mathcal{#1}}
+\newcommand{\cl}[1]{\mathscr{#1}}
+\newcommand{\tree}{\mathbf{t}}
+\newcommand{\lang}[1]{\mathscr{L}(#1)}
+\newcommand{\EFg}{Ehrenfeucht-Fra{\"i}ss{\'e}\xspace}
+
+\newcommand{\subsets}{\wp} % powerset
+\newcommand{\conc}{{\cdot}} % concatenation
+\newcommand{\pos}{\mathsf{TreesPos}}
+\newcommand{\tpos}{\mathsf{pos}}
+\newcommand{\talph}{\mathsf{alph}}
+\newcommand{\prk}{\cl{p}}
+\newcommand{\REG}{\textit{REG}}
+\newcommand{\Trees}{\textit{Trees}}
+\newcommand{\fudgeceb}{\mathrel{\phantom{\coloneqq}}\mathopen{\phantom{\{}}}
+\newcommand{\fudgece}{\mathrel{\phantom{\coloneqq}}}
+\newcommand{\fudgee}{\mathrel{\phantom{=}}}
+\newcommand{\fudgeCe}{\mathrel{\phantom{\Coloneqq}}}
+\newcommand{\fudgeeb}{\mathrel{\phantom{=}}\mathopen{\phantom{\{}}}
+\newcommand{\xml}{\textsc{xml}\xspace}
+\newcommand{\dbracket}[1]{[\![ #1 ]\!]}
+\newcommand{\abracket}[1]{[\![ #1 ]\!]}
+
+%Complexity classes
+\newcommand{\NP}{\textsc{NP}\xspace}
+\newcommand{\coNP}{\textsc{Co-NP}\xspace}
+\newcommand{\ptime}{\textsc{PTime}\xspace}
+\newcommand{\exptime}{\textsc{ExpTime}\xspace}
+\newcommand{\nexptime}{\textsc{NExpTime}\xspace}
+\newcommand{\logspace}{\textsc{LogSpace}\xspace}
+\newcommand{\pspace}{\textsc{PSpace}\xspace}
+\newcommand{\npspace}{\textsc{NPSpace}\xspace}
+\newcommand{\apspace}{\textsc{APSpace}\xspace}
+
+
+\newcommand{\expspace}{\textsc{Exp\-Space}\xspace}
+%\newcommand{\PSPACE}{\textsc{pspace}\xspace}
+
+\newcommand{\complete}{\textsc{complete}\xspace} %Para poner \np-\complete, por ejemplo
+\newcommand{\hard}{\textsc{hard}\xspace}
+\newcommand{\NPcomplete}{\textsc{NP-\complete}\xspace}
+\newcommand{\pspacecomplete}{\textsc{PSpace-\complete}\xspace}
+
+\newcommand{\aA}{\mathbf{a}}
+\newcommand{\bB}{\mathbf{b}}
+\newcommand{\eE}{\mathbf{e}}
+\newcommand{\dD}{\mathbf{d}}
+\newcommand{\tT}{\mathbf{t}}
+\newcommand{\midd}{\mathrel{\,\mid\,}}
+
+\newcommand{\md}{{\sf dd}}
+\newcommand{\qr}{{\sf qr}}
+%\newcommand{\md}{{\rm dd}}
+%\newcommand{\qr}{{\rm qr}}
+\newcommand{\FO }{{\rm FO}}
+
+%\newcommand {\simmn}[2]{=_{#1,#2}}
+\newcommand {\starmn}[2]{\star_{#1-#2}}
+
+\newcommand{\equivd}{\equiv^{\dow}}
+\newcommand{\equivdres}{\equiv^{\dow-}} %Con un -, para el fragmento restringido XPATH - $\xpdeq$
+\newcommand{\sequivd}{\Rrightarrow^{\dow}} %%% Nuevo. Equivalencia en una direccion, para node expressions positivas
+\newcommand{\sequivv}{\Rrightarrow^{\updownarrow}}
+\newcommand{\bisimd}{\bisim^{\dow}}
+\newcommand{\simd}{\simu^{\dow}}
+\newcommand{\equivv}{\equiv^{\upw\dow}}
+\newcommand{\bisimv}{\bisim^{\upw\dow}}
+%\newcommand{\simv}{\simu^{\dow\upw}}
+%\newcommand{\equivvs}{\equiv^{\dow\upw\rtdow\rtupw}}
+%\newcommand{\equivds}{\equiv^{\dow\rtdow}}
+
+%\newcommand{\equivrtd}{\equiv^{\rtdow}}
+%\newcommand{\bisimrtd}{\bisim^{\rtdow}}
+
+
+
+%\newcommand{\equivd}{\equiv^{\xp{\dow}}}
+%\newcommand{\bisimd}{\bisim^{\xp{\dow}}}
+%\newcommand{\equivv}{\equiv^{\xp{\dow,\upw}}}
+%\newcommand{\bisimv}{\bisim^{\xp{\dow,\upw}}}
+
+
+
+%\newcommand{\nd}{\textup{nd}}%
+\newcommand{\nd}{{\sf nd}}%
+\newcommand{\nav}{\textup{nav}}%
+
+\newcommand{\alphaud}{\alpha^{\upw\!\dow}}
+\newcommand{\betaud}{\beta^{\upw\!\dow}}
+\newcommand{\gammaud}{\gamma^{\upw\!\dow}}
+%\newcommand{\vd}{\textup{vd}}%
+\newcommand{\vd}{{\sf vd}}%
+
+\newcommand{\child}{{\to}} %the child relation
+\newcommand{\childp}[1]{{\stackrel{#1}{\to}}} %the child in n steps relations, where n is a parameter
+
+
+%\newcommand{\data}{\sf data}
+\newcommand{\data}{\mathit{data}}
+\newcommand{\ancestorof}{\preceq}
+\newcommand{\ancestorofstr}{\prec}
+\newcommand{\descendantof}{\succeq}
+\newcommand{\descendantofstr}{\succ}
+\newcommand{\pto}{\rightharpoonup}
+\newcommand{\numchild}{\textit{$\#$children}}
+
+\newcommand{\fotwo}{\text{FO}^2}
+
+% XPATH
+\newcommand{\xpath}{\text{XPath}\xspace}
+\newcommand{\dxpath}{\text{Data XPath}\xspace}
+\newcommand{\corexpath}{\text{Core-XPath}\xspace}
+\newcommand{\coredataxpath}{\text{Core-Data-XPath}\xspace}
+\newcommand{\rxpath}{\text{regXPath}\xspace}
+%\newcommand{\xp}[1]{\xpathd^{#1}}
+\newcommand{\xp}[1]{\xpathd({#1})}
+\newcommand{\xpp}[1]{\xpathd({#1})^+}
+
+\newcommand{\xpathd}{\ensuremath{\xpath_{=}}\xspace}
+\newcommand{\down}{\downarrow}
+
+\newcommand{\xpd}{\xp{\dow}\xspace}
+\newcommand{\xpv}{\xp{\vertarrows}\xspace}
+
+\newcommand{\xpsd}{\xp{\dow\rtdow}\xspace}
+\newcommand{\xpsv}{\xp{\dow\upw\rtdow\rtupw}\xspace}
+
+\newcommand{\xpdp}{\xpp{\dow}\xspace}
+\newcommand{\xpvp}{\xpp{\dow\upw}\xspace}
+\newcommand{\xpsvp}{\xpp{\dow\upw\rtdow\rtupw}\xspace}
+\newcommand{\xpsdp}{\xpp{\dow\rtdow}\xspace}
+
+\newcommand{\xprtd}{\xp{\rtdow}\xspace}
+\newcommand{\xprtv}{\xp{\rtdow\rtupw}\xspace}
+
+
+
+% XPATH AXES
+\newcommand{\rig}{{\rightarrow}}
+\newcommand{\trig}{{\rightarrow^+}}
+\newcommand{\rtrig}{{\rightarrow^*}}
+
+\newcommand{\lef}{{\leftarrow}}
+\newcommand{\tlef}{{{}^+\!\!\leftarrow}}
+\newcommand{\rtlef}{{{}^*\!\!\leftarrow}}
+
+\newcommand{\upw}{{\uparrow}}
+\newcommand{\tupw}{{\uparrow^+}}
+\newcommand{\rtupw}{{\uparrow^*}}
+
+\newcommand{\dow}{{\downarrow}}
+\newcommand{\tdow}{{\downarrow_+}} %transitive closure of down
+\newcommand{\rtdow}{{\downarrow_*}} %reflexive transitive closure
+
+\newcommand{\vertarrows}{\upw\dow}
+
+
+% BIBLIOGRAPHY STYLE
+%\usepackage{natbib}
+%\bibliographystyle{plainnatdff}
+%\newcommand{\citep}[1]{\cite{#1}}
+
+\newcommand{\OMIT}[1]{}
+
+\newcommand{\cchild}{\texttt{child}\xspace}
+\newcommand{\cdescendant}{\texttt{descendant}\xspace}
+\newcommand{\cparent}{\texttt{parent}\xspace}
+\newcommand{\cancestor}{\texttt{ancestor}\xspace}
+\newcommand{\cnextsibling}{\texttt{next-sibling}\xspace}
+\newcommand{\cprevioussibling}{\texttt{previous-sibling}\xspace}
+\newcommand{\csibling}{\texttt{sibling}\xspace}
+\newcommand{\ulim}[2]{{\rm ulim}_{#1}{#2}}
+
+\newcommand{\satd}{$=_{n,m}^\downarrow$-satisfiable\xspace}
+\newcommand{\nsatd}{$\neq_{n,m}^\downarrow$-satisfiable\xspace}
+\newcommand{\finsatd}{$=_{n,m}^\downarrow$-finitely satisfiable\xspace}
+\newcommand{\nfinsatd}{$\neq_{n,m}^\downarrow$-finitely satisfiable\xspace}
+
+\newcommand{\bisatd}{$=^\downarrow$-satisfiable\xspace} %for path expressions.
+\newcommand{\binsatd}{$\neq^\downarrow$-satisfiable\xspace} % paths
+\newcommand{\bifinsatd}{$=^\downarrow$-finitely satisfiable\xspace} % paths
+\newcommand{\binfinsatd}{$\neq^\downarrow$-finitely satisfiable\xspace} %paths
+
+\newcommand{\satv}{$=_{n,m}^{\vertarrows}$-satisfiable\xspace}
+\newcommand{\nsatv}{$\neq_{n,m}^{\vertarrows}$-satisfiable\xspace}
+\newcommand{\finsatv}{$=_{n,m}^{\vertarrows}$-finitely satisfiable\xspace}
+\newcommand{\nfinsatv}{$\neq_{n,m}^{\vertarrows}$-finitely satisfiable\xspace}
+
+\newcommand{\bisatv}{$=^{\vertarrows}$-satisfiable\xspace} %for path expressions.
+\newcommand{\binsatv}{$\neq^{\vertarrows}$-satisfiable\xspace} % paths
+\newcommand{\bifinsatv}{$=^{\vertarrows}$-finitely satisfiable\xspace} % paths
+\newcommand{\binfinsatv}{$\neq^{\vertarrows}$ -finitely satisfiable\xspace} %paths
+
+\newcommand{\quasid}{{\footnotesize $\down$}-quasi\xspace}
+\newcommand{\quasiv}{{\footnotesize $\upw\dow$}-quasi\xspace}
+
+%\newcommand{\vbisim}{{\footnotesize $\upw\dow$}-bisimulation\xspace}
+%\newcommand{\vbisims}{{\footnotesize $\upw\dow$}-bisimulations\xspace}
+%\newcommand{\dbisim}{{\footnotesize $\down$}-bisimulation\xspace}
+%\newcommand{\dbisims}{{\footnotesize $\down$}-bisimulations\xspace}
+\newcommand{\vbisim}{{$\xpv$}-bisimulation\xspace} %%% Estas aparecen en binary bisim. Cambie la notacion para unificar con la intro de la tesis
+\newcommand{\vbisims}{{$\xpv$}-bisimulations\xspace}
+\newcommand{\dbisim}{{$\xpd$}-bisimulation\xspace}
+\newcommand{\dbisims}{{$\xpd$}-bisimulations\xspace}
+
+\newcommand{\dsat}{{\footnotesize $\down$}-saturated\xspace}
+\newcommand{\vsat}{{\footnotesize $\upw\dow$}-saturated\xspace}
+
+\newcommand{\bidsat}{binary {\footnotesize $\down$}-saturated\xspace}
+\newcommand{\bivsat}{binary {\footnotesize $\upw\dow$}-saturated\xspace}
+
+\newcommand{\dsatn}{{\footnotesize $\down$}-saturation\xspace}
+\newcommand{\vsatn}{{\footnotesize $\upw\dow$}-saturation\xspace}
+
+
+
+
+%%%%%%% Cambiando updown para que sea up-down
+\renewcommand{\updownarrow}{{\upw \dow}}
+%%%%%%%%%%%%
+
+%%%%%%%%%%%% Nombres para nociones de binary bisimulacion down:
+\newcommand{\Harmony}{\textbf{Harmony}\xspace} %Comando tambien usado en la seccion de nodos
+\newcommand{\Equidistance}{\textbf{Equidistance}\xspace}
+\newcommand{\Split}{\textbf{Split}\xspace}
+\newcommand{\Zig}{\textbf{Zig}\xspace} %Comando tambien usado en la seccion de nodos
+\newcommand{\Zag}{\textbf{Zag}\xspace} %Comando tambien usado en la seccion de nodos
+%%%%%%%%%%%%
+
+%%%%%%%%%%%% Nombres para nociones de bisimulacion vertical:
+% \newcommand{\Harmony}{\textbf{Harmony}\xspace} % Mismo comando que en Down
+\newcommand{\Reverse}{\textbf{Reverse}\xspace}
+\newcommand{\EquidistanceZig}{\textbf{Split-Zig}\xspace}
+\newcommand{\EquidistanceZag}{\textbf{Split-Zag}\xspace}
+%\newcommand{\Zig}{\textbf{Zig}\xspace} % Misma que down
+%\newcommand{\Zag}{\textbf{Zag}\xspace} % Misma que down
+
+\newcommand{\Specificity}{\textbf{Endpoints}\xspace} %Se deduce de las anteriores
+%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%
+%%%% Algunos comandos de wqo
+%%%%%%%%%%%
+
+\newcommand {\UU}{U_{n,g}}
+\newcommand {\PP}{P_{n,g}}
+\newcommand {\PPP}{L}
+\newcommand {\GG}{G_{n,g}}
+
+\newcommand{\FGH}[1]{\mathfrak{F}_{#1}}
+%\newcommand{\Xflecha}{\mbox { $\vec{\textbf{X}}$ }}
+\newcommand {\infNorm}[1]{|#1|_{\infty}}
+%pongo un comando para secuencias para facilitar potenciales cambios de notacion
+\newcommand {\seq}[1]{{\bf #1}}
+%idem para concatenacion en secuencias
+\newcommand {\concat}{{^\smallfrown}}
+\newcommand {\uh}{\upharpoonright}
+\newcommand {\card}[1]{|#1|}
+\newcommand{\lx}{<_{\rm lex}}
+\newcommand{\gx}{>_{\rm lex}}
+\newcommand{\leqx}{\leq_{\rm lex}}
+\newcommand{\eqdef}                     % equal by definition
+  {\stackrel{\scriptscriptstyle \mathrm{def}}{=}}
+\newcommand{\equivdef}                  % equivalent by definition
+  {\stackrel{\scriptscriptstyle \mathrm{def}}{\Leftrightarrow}}
+\newcommand{\del}{\textsc{del}}
+\newcommand{\ext}{\textsc{ext}}
+\newcommand{\Min}{\textsc{min}}
+
+
+\newcommand{\ITCA}{\textsc{itca}\xspace}
+
+\newcommand{\ATRA}{\textsc{atra}\xspace}
+
+
+
+
+\newcommand{\pfin}{\+P_{<\infty}}
+%\newcommand{\mset}{\+M}
+\newcommand{\finmset}{\+M_{<\infty}}
+
+
+
+
+\newcommand{\lbound}{\llexd} % lower bound on \bad
+\newcommand {\LUbound}[2] {L^{{\rm lex}}_{#1, #2}} %max long en Lex n,g
+\newcommand{\llex}{L}
+\newcommand{\Lbound}[2][g]{o_{{#2}\ctrl[#1]}} % auxiliary lower bound function
+\newcommand{\llexd}[2][g]{\llex^{{\rm lex}}_{{#2}\ctrl[#1]}}
+\newcommand{\norm}[1]{|#1|}
+\newcommand{\pred}[3]{\textsc{pred}^{#1}_{#2}(#3)}
+\newcommand{\ant}[2]{B^{#1}_{#2}}
+\newcommand{\predx}[2]{\textsc{pred}^{#1}_{#2}}
+
+
+\newcommand{\lmset}[3]{L^{{\rm ms}}_{#1,#2,#3}}
+\newcommand{\lmsetn}[4]{L^{{\rm ms (#4)}}_{#1,#2,#3}}
+\newcommand{\lmsett}[2]{L^{{\rm ms}}_{#1,#2}}
+\newcommand{\ubmset}[3]{U_{#1,#2,#3}}
+\newcommand{\lpx}[2]{L^{P}_{#1,#2}}
+\newcommand{\ubmsett}[3]{U'_{#1,#2,#3}}
+\newcommand{\ubmsettt}[3]{U''_{#1,#2,#3}}
+
+\newcommand{\llexico}[2]{L^{{\rm lex}}_{#1,#2}}
+
+
+\newcommand{\bp}[2]{\downarrow_{#1,#2}}
+\newcommand{\bt}[3]{T^{#1}(#2,#3)}
+
+\newcommand{\lmaj}[2]{L^{{\rm maj}}_{#1,#2}}
+\newcommand{\lprod}[2]{L^{{\rm pr}}_{#1,#2}}
+\newcommand{\leqp}{\leq_{\rm pr}}
+\newcommand{\geqp}{\geq_{\rm pr}}
+\newcommand{\gms}{>_{\rm ms}}
+\newcommand{\lms}{<_{\rm ms}}
+\newcommand{\leqms}{\leq_{\rm ms}}
+\newcommand{\leqma}{\leq_{\rm maj}}
+\newcommand{\leqmi}{\leq_{\rm min}}
+\newcommand{\leqmad}{\leq_{{\rm maj}^*}}
+\newcommand{\leqpDisj}{\leq_{{\rm pr}}^{{\rm d}}}
+\newcommand{\leqmaDisj}{\leq_{{\rm maj}}^{{\rm d}}}
+
+\newcommand{\linprod}{h}
+\newcommand{\linprodp}{h}
+\newcommand{\linmaj}{f}
+
+
+
+
+%%%%%%%%%% Macros de aximatization
+
+\newcommand{\xpdeq}{\xpd^-}
+
+%%%% Para proceder al estilo de logica ecuacional como B. ten Cate
+
+\newcommand{\equivInstance}[2]{#1 \equiv #2} % Equivalence Instance.
+\newcommand{\leqInstance}[2]{#1 \leq #2} % equivalente a una implicacion
+
+\newcommand{\botNode}{\mbox{\sc false}} %Bottom node
+\newcommand{\botPath}{\bot} % Bottom path
+\newcommand{\topNode}{\mbox{\sc true}} % Top node
+
+\newcommand{\sisi}{{\bf V_{=,\neq}}}
+\newcommand{\sino}{{\bf V_{=,\lnot \neq}}}
+\newcommand{\nosi}{{\bf V_{\lnot =,\neq}}}
+\newcommand{\nono}{{\bf V_{\lnot =,\lnot \neq}}}
+
+
+\usepackage{xstring}
+
+\newcommand{\prax}[1]{%
+    \IfEqCase{#1}{%
+        {1}{\hyperlink{praxone}{\sf PrAx1}\xspace}%
+        {2}{\hyperlink{praxtwo}{\sf PrAx2}\xspace}%
+        {3}{\hyperlink{praxthree}{\sf PrAx3}\xspace}%
+    }%
+}%
+
+
+\newcommand{\ndax}[1]{%
+    \IfEqCase{#1}{%
+        {1}{\hyperlink{ndaxone}{\sf NdAx1}\xspace}%
+        {2}{\hyperlink{ndaxtwo}{\sf NdAx2}\xspace}%
+        {3}{\hyperlink{ndaxthree}{\sf NdAx4}\xspace}%
+        {4}{\hyperlink{ndaxfour}{\sf NdAx3}\xspace}%
+    }%
+}%
+
+
+\newcommand{\lbax}[1]{%
+    \IfEqCase{#1}{%
+        {1}{\hyperlink{lbaxone}{\sf LbAx1}\xspace}%
+        {2}{\hyperlink{lbaxtwo}{\sf LbAx2}\xspace}%
+    }%
+}%
+
+
+\newcommand{\eqax}[1]{%
+    \IfEqCase{#1}{%
+        {1}{\hyperlink{eqaxone}{\eqaxonen}\xspace}%
+        {2}{\hyperlink{eqaxtwo}{\eqaxtwon}\xspace}%
+        {3}{\hyperlink{eqaxthree}{\eqaxthreen}\xspace}%
+        {4}{\hyperlink{eqaxfour}{\eqaxfourn}\xspace}%
+        {5}{\hyperlink{eqaxfive}{\eqaxfiven}\xspace}%
+        {6}{\hyperlink{eqaxsix}{\eqaxsixn}\xspace}%
+        {7}{\hyperlink{eqaxseven}{\eqaxsevenn}\xspace}%
+        {8}{\hyperlink{eqaxeight}{\eqaxeightn}\xspace}%
+    }%
+}%
+
+
+\newcommand{\eqaxonen}{{\sf EqAx6}}%
+\newcommand{\eqaxtwon}{{\sf EqAx1}}%
+\newcommand{\eqaxthreen}{{\sf EqAx2}}%
+\newcommand{\eqaxfourn}{{\sf EqAx3}}%
+\newcommand{\eqaxfiven}{{\sf EqAx4}}%
+\newcommand{\eqaxsixn}{{\sf EqAx7}}%
+\newcommand{\eqaxsevenn}{{\sf EqAx5}}%
+\newcommand{\eqaxeightn}{{\sf EqAx8}}%
+
+
+%\newcommand{\neqax}[1]{{\sf NeqAx\hspace{-0.00875cm}#1}}
+
+\newcommand{\isaxone}{\hyperlink{isaxone}{\sf IsAx1}\xspace}
+\newcommand{\isaxtwo}{\hyperlink{isaxtwo}{\sf IsAx2}\xspace}
+\newcommand{\isaxthree}{\hyperlink{isaxthree}{\sf IsAx3}\xspace}
+\newcommand{\isaxfour}{\hyperlink{isaxfour}{\sf IsAx4}\xspace}
+\newcommand{\isaxfive}{\hyperlink{isaxfive}{\sf IsAx5}\xspace}
+\newcommand{\isaxsix}{\hyperlink{isaxsix}{\sf IsAx6}\xspace}
+\newcommand{\isaxseven}{\hyperlink{isaxseven}{\sf IsAx7}\xspace}
+
+\newcommand{\neqaxone}{\hyperlink{neqaxone}{\neqaxonen}\xspace}
+\newcommand{\neqaxtwo}{\hyperlink{neqaxtwo}{\neqaxtwon}\xspace}
+\newcommand{\neqaxfour}{\hyperlink{neqaxfour}{\neqaxfourn}\xspace}
+\newcommand{\neqaxfive}{\hyperlink{neqaxfive}{\neqaxfiven}\xspace}
+\newcommand{\neqaxeight}{\hyperlink{neqaxeight}{\neqaxeightn}\xspace}
+\newcommand{\neqaxnine}{\hyperlink{neqaxnine}{\neqaxninen}\xspace}
+\newcommand{\neqaxten}{\hyperlink{neqaxten}{\neqaxtenn}\xspace}
+\newcommand{\neqaxeleven}{\hyperlink{neqaxeleven}{\neqaxelevenn}\xspace}
+\newcommand{\neqaxtwelve}{\hyperlink{neqaxtwelve}{\neqaxtwelven}\xspace}
+\newcommand{\neqaxfifteen}{\hyperlink{neqaxfifteen}{\neqaxfifteenn}\xspace}
+\newcommand{\neqaxsixteen}{\hyperlink{neqaxsixteen}{\neqaxsixteenn}\xspace}
+\newcommand{\neqaxseventeen}{\hyperlink{neqaxseventeen}{\neqaxseventeenn}\xspace}
+\newcommand{\neqaxeighteen}{\hyperlink{neqaxeighteen}{\neqaxeighteenn}\xspace}
+
+
+\newcommand{\neqaxonen}{{\sf NeqAx1}\xspace}
+\newcommand{\neqaxtwon}{{\sf NeqAx4}\xspace}
+\newcommand{\neqaxfourn}{{\sf NeqAx6}\xspace}
+\newcommand{\neqaxfiven}{{\sf NeqAx6}\xspace}
+\newcommand{\neqaxeightn}{{\sf NeqAx7}\xspace}
+\newcommand{\neqaxninen}{{\sf NeqAx8}\xspace}
+\newcommand{\neqaxtenn}{{\sf NeqAx9}\xspace}
+%\newcommand{\neqaxelevenn}{{\sf NeqAx12}\xspace}
+%\newcommand{\neqaxtwelven}{{\sf NeqAx13}\xspace}
+\newcommand{\neqaxfifteenn}{{\sf NeqAx5}\xspace}
+\newcommand{\neqaxsixteenn}{{\sf NeqAx2}\xspace}
+\newcommand{\neqaxseventeenn}{{\sf NeqAx3}\xspace}
+\newcommand{\neqaxeighteenn}{{\sf NeqAx10}\xspace}
+
+
+
+%%%% Axiom sets
+\newcommand{\axiomRestrNeq}{\mathsf{XP}}
+\newcommand{\axiomRestr}{\mathsf{XP^-}}
+
+
+%Model equivalences
+\newcommand{\eqfull}{\equiv}
+\newcommand{\eqres}{\equiv^-}
+
+
+%
+\newcommand{\con}{\textbf{Con}\xspace}
+
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\bu}{{\bf u}}
+\newcommand{\bv}{{\bf v}}
+
+%
+\newcommand{\nfP}[1]{P^-_{#1}}
+\newcommand{\nfD}[1]{D^-_{#1}}
+\newcommand{\nfN}[1]{N^-_{#1}}
+
+
+
+
+
+%%%%%%%%% Logics of repeating values on data trees
+
+
+%%Intro
+
+\newcommand{\CTL}{\textup{CTL}}%
+\newcommand{\LRV}{\textup{LRV}\xspace}% % La logica LRV
+\newcommand{\LRVT}{\ensuremath{\LRV^\top}\xspace}% % La logica LRV Top; ademas de x = Xi y, solo se pueden hacer comparaciones del tipo x = XF y
+\newcommand{\LRVd}[1]{\ensuremath{\LRV^{{\textsc{D}}}_{#1}}}%
+\newcommand{\LRVdn}{\LRVd{n}}%
+\newcommand{\LRVdrestr}[1]{\ensuremath{\LRV^{\textsc{D}-}_{#1}}}%
+\newcommand{\LRVn}{\ensuremath{\LRV_n}}%
+
+\newcommand{\XF}{\EF}%
+\newcommand{\EF}{\textup{EF}}%
+\newcommand{\FutureCondition}[1]{\EF \langle #1\textup{?}\rangle} %Usado en el contexto u = \EF{\phi} v, para decir que el valor de u se repite en el atributo v de un nodo futuro que satisface \phi
+\newcommand{\deq}{\approx}%
+\newcommand{\AG}{\textup{AG}}%
+\newcommand{\Op}[2]{\AG_{\deq#1}(#2)}%
+
+%%%Modelos y notaci\'on gen\'erica
+
+%\newcommand{\atree}{\mathbf{t}}%
+\newcommand{\aModel}{M}%
+\newcommand{\aWord}{W}%
+\newcommand{\aTree}{T}%
+\newcommand{\aNode}{x}%
+\newcommand{\aNodeb}{y}%
+\newcommand{\aNodec}{z}%
+\newcommand{\aValue}{u}%
+\newcommand{\aValueb}{v}%
+\newcommand{\aValuec}{w}%
+\newcommand{\aValuation}{V}%
+\newcommand{\aRelation}{R}%
+\newcommand{\aFunction}{f}%
+\newcommand{\aFunctionb}{g}%
+\newcommand{\aFunctionc}{h}%
+\newcommand{\aConstantc}{c}%
+
+\newcommand{\aNominal}{i}
+\newcommand{\aNominalb}{j}
+\newcommand{\aNominalc}{k}
+\newcommand{\aNominald}{l}
+\newcommand{\aLabel}{a}
+\newcommand{\aLabelb}{b}
+\newcommand{\aTableaux}{\ensuremath{\mathcal{T}}}
+\newcommand{\aBranch}{\ensuremath{\Theta}}
+
+\newcommand{\aFormula}{\ensuremath{\phi}\xspace}
+\newcommand{\aFormulab}{\ensuremath{\psi}\xspace}
+\newcommand{\aFormulac}{\ensuremath{\chi}\xspace} 
+
+
+%%%reduccion
+
+%Sin []
+\newcommand{\XFigS}[1]{{#1} \deq \XF {#1}} % General, para poner cualquier nombre de variable
+\newcommand{\notXFigS}[1]{\lnot {#1} \deq \XF {#1}}
+\newcommand{\XFdgS}[1]{{#1} \dneq \XF {#1}}
+\newcommand{\notXFdgS}[1]{\lnot {#1} \dneq \XF {#1}}
+
+%%% Ahora con []
+\newcommand{\XFig}[1]{[\XFigS{#1}]}
+\newcommand{\notXFig}[1]{[\notXFigS{#1}]}
+\newcommand{\XFdg}[1]{[\XFdgS{#1}]}
+\newcommand{\notXFdg}[1]{[\notXFdgS{#1}]}
+
+\newcommand{\XFi}{\XFig{v}} %igual valor v en XF
+\newcommand{\notXFi}{\notXFig{v}}
+\newcommand{\XFd}{\XFdg{v}} %distinto valor en XF
+\newcommand{\notXFd}{\notXFdg{v}}
+
+\newcommand{\pp}{(\XFi, \XFd)}
+\newcommand{\np}{(\notXFi, \XFd)}
+\newcommand{\pn}{(\XFi, \notXFd)}
+\newcommand{\nn}{(\notXFi, \notXFd)}
+
+\newcommand{\sub}[2]{{#1}(#2)}
+
+\newcommand{\ident}{{\rm id}}
+
+\newcommand{\closure}[1]{cl(#1)} %closure of a formula
+\newcommand{\Atom}[1]{Atom(#1)} %Set of atoms of a phi
+
+\newcommand{\LRVuvXF}{\logicd{1}{(\XF)}}%{\logic_1(\XF)}
+\newcommand{\incNBVASS}[1]{\mbox{inc-}#1\mbox{BVASS}}
+\newcommand{\F}[1]{\+F_{#1}} %Conjunto de algo-frames
+\newcommand{\Fk}{\F{k}} %Conjunto de k-frames
+\newcommand{\emptystr}{\lambda} %notation for empty string
+\newcommand{\satun}{\text{SAT}_\infty}
+
+
+\newcommand{\vassr}[2]{\ensuremath{#2\textup{VASS}_{#1}}}%
+\newcommand{\vass}{\textup{VASS}}%
+\newcommand{\vassbin}[1]{\vassr{2}{#1}}%
+\newcommand{\Confs}{\textit{Confs}}%
+\newcommand{\mvassr}[2]{\ensuremath{#2\textup{MVASS}_{#1}}}%
+\newcommand{\mvass}{\textup{MVASS}}%
+
+\newcommand{\bvas}{\textup{BVAS}}
+
+
+%%Extension
+\newcommand{\Oplain}{\AG_{\deq}}%
+\newcommand{\OplainPositive}{\AG_{\deq}^+}%Para notar que solo aparecen instancias positivas
+\newcommand{\OpPositive}{+\Op}%Para notar que solo aparecen instancias positivas
+
+\newcommand{\inc} {\mbox{inc}}
+\newcommand{\dec} {\mbox{dec}}
+
+%%
+
+\newcommand{\head}{\pi_h} % Para una regla r = q -> q', \head(r) = q
+
+
+%%% Del de LRV
+\newcommand{\lqk}{\preceq}%
+\newcommand{\gqk}{\succeq}%
+\newcommand{\lk}{\prec}%
+\newcommand{\gk}{\succ}%
+
+\newcommand{\arule}[3]{#1 \xrightarrow{#2} #3}%
+
+%%% Del de LRV Decision problems
+\newcommand{\reach}{\textsc{Reach}}%
+\newcommand{\increach}{\textsc{Reach}^+}%
+\newcommand{\csreach}{\textsc{CSReach}}%
+
+
+
+%%estaban en logic.tex:
+\newcommand{\EU}{\textup{EU}}%
+\newcommand{\AF}{\textup{AF}}%
+\newcommand{\EX}{\textup{EX}}%
+\newcommand{\X}{\EX}%
+\newcommand{\AU}{\textup{AU}}%
+%\newcommand{\midd}{\,\mid\,}%
+\newcommand{\EG}{\textup{EG}}%
+% \newcommand{\AX}{\textup{AX}}%
+\newcommand{\dneq}{\not\deq}%
+\newcommand{\satr}[1]{\text{SAT}_{#1}}
+
+\newcommand{\Until}[2]{#1\textup{U}#2}
+
+
+%%% Uso para axiomatization
+
+%\newcommand{\restr}[1]{\!\restriction\!\!{{\scriptstyle #1}}} %Para que se note m\'as. Ojo que difiere en notacion con otros capitulos... tratar de unificar
+%\newcommand{\restr}{|}
+%\newcommand{\restr}[1]{|{{#1}}} %Version normal size
+%\newcommand{\restrell}[1]{|_\ell{{#1}}} % Version normal size
+\newcommand{\restr}[1]{|{{\scriptstyle #1}}} % Para version nueva de axiom
+\newcommand{\restrell}[1]{|_\ell{{\scriptstyle #1}}} % Para version nueva de axiom
+%%%%%%%%%%%%
+
+%%%
+\newcommand{\BML}{basic modal logic} %% Para mencionar basic modal logic
+
+
+
+%\newcommand{\mdl}{\ensuremath{mdl}} %minimum description length
+\newcommand{\mdl}{\MakeUppercase {mdl}} %minimum description length
+
+
+%%%%%%%%% Por si desp queremos cambiarlo a p_1, p_2,... p_6
+%\newcommand{\varA}{p}
+%\newcommand{\varB}{q}
+%\newcommand{\varC}{z}
+%\newcommand{\varD}{r}
+%\newcommand{\varE}{s}
+%\newcommand{\varF}{t}
+\newcommand{\varA}{p_1}
+\newcommand{\varB}{p_2}
+\newcommand{\varC}{p_3}
+\newcommand{\varD}{p_4}
+\newcommand{\varE}{p_5}
+\newcommand{\varF}{p_6}
+\newcommand{\varG}{p_7}
+\newcommand{\varH}{p_8}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\AND}{\ensuremath{\land}\xspace}
+\newcommand{\OR}{\ensuremath{\lor}\xspace}
+
+
+\ProcessOptions
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+\newcommand{\variables}[1]{\ensuremath{\textsc{var}(#1)}}% Para mencionar variables de una f\'ormula
+\newcommand{\propvars}{\textsc{Prop}}
